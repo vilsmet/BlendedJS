@@ -53,20 +53,94 @@
 // ЗАДАЧА 6
 // НАПИШІТЬ ПРОГРАМУ , ДЕ МИ У КОРИСТОВАЧА ПИТАЄМОСЬ МІСЯЦЬ НАРОДЖЕННЯ, І ПОКАЗУЄМО У ЯКУ ПОРУ РОКУ ВІН НАРОДИВСЯ
 
-let birthMonth = Number(prompt("В якому місяці ви народилися?"));
-if (birthMonth === 12 || birthMonth === 1 || birthMonth === 2) {
-    console.log('Зима')
-}
-else if (birthMonth >= 3 && birthMonth < 6) {
-    console.log("Весна")
-}
-else if (birthMonth >= 6 && birthMonth < 9) {
-    console.log("Літо")
-}
-else if (birthMonth >= 9 && birthMonth < 12) {
-    console.log("Осінь")
-}
+// let birthMonth = Number(prompt("В якому місяці ви народилися?"));
+// if (birthMonth === 12 || birthMonth === 1 || birthMonth === 2) {
+//     console.log('Зима')
+// }
+// else if (birthMonth >= 3 && birthMonth < 6) {
+//     console.log("Весна")
+// }
+// else if (birthMonth >= 6 && birthMonth < 9) {
+//     console.log("Літо")
+// }
+// else if (birthMonth >= 9 && birthMonth < 12) {
+//     console.log("Осінь")
+// }
 
-else {
-console.log('Такої пори року немає')
-}
+// else {
+// console.log('Такої пори року немає')
+// }
+
+// ЗАДАЧА 1
+// БАЗОВІ ОПЕРАЦІЇ З МАСИВОМ
+// 1)створіть масив styles з елементами «Джаз» і «Блюз»
+// 2)добавте «Рок-н-ролл» в кінець
+// 3)замініть значення в середині на «Классика»
+// 4)видаліть перший елемент і виведіть його в консоль
+// 5)вставте «Рэп» і «Регги» на початок масиву
+
+// МАСИВ ПО ХОДІ ВИПОВНЕННЯ ОПЕРАЦІЇ
+// Джаз, Блюз
+// Джаз, Блюз, Рок-н-ролл
+// Джаз, Классика, Рок-н-ролл
+// Классика, Рок-н-ролл
+// Рэп, Регги, Классика, Рок-н-ролл
+
+// const styles = ["Джаз", "Блюз"];
+// styles.push("Рок-н-ролл");
+
+// styles.splice(1, 1, "Классика");
+
+
+// // console.log(styles.shift());
+// styles.unshift("Рэп", "Регги");
+// console.log(styles);
+
+// ЗАДАЧА 2
+// Напишіть ф-цію logItems(array) , яка буде получати масив і використовуючи цикл for , який для кожного елемента масива буде виводити в консоль
+// повідомлення у форматі <індекс елемента> та <значення елемента>.
+// Номерація для кожного елемента масива ['Mango', 'Poly', 'Ajax'] з індексом 0 буде виведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
+
+// const users = ["Mango", "Poly", "Ajax"];
+// // function logItems(array) {
+// //     for (let i = 0; i < array1.length; i += 1){
+// //         console.log(i, array1[i])
+// //     }
+// // }
+// for (let user of users) {
+//     console.log(users.indexOf(user), user)
+// }
+// // logItems();
+
+// ЗАДАЧА 3
+// Напишіть код , який шукає саме найменше число в масиві
+// 1) напишіть циклом for
+// const numbers = [2, 17, 94, 1, 23, 37];
+// 2) перепишіть функцією findSmallestNumber(numbers)
+// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
+// console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+
+// let smallestNumber = numbers[0];
+// for (let number of numbers) {
+//     if (smallestNumber > number) {
+//         smallestNumber = number;
+//     }
+// }
+ 
+// console.log(smallestNumber);
+
+// function findSmallestNumber(numbers) {
+//   let smallestNumber = numbers[0];
+//   for (let number of numbers) {
+//       if (smallestNumber > number) {
+//           smallestNumber = number;
+//       }
+//     }
+//     return smallestNumber;
+// }
+
+// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
+// console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+
+
+
