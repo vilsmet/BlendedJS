@@ -26,3 +26,47 @@
 // let item2 = +prompt("Введіть ціну телеaфона");
 // let item3 = +prompt("Введіть ціну комп'ютера");
 // console.log((item1 + item2 + item3))
+// ЗАДАЧА 4
+// ВИКОРИСТОВУЮЧИ КОНСТРУКЦІЮ IF...ELSE , НАПИШИ КОД, ЯКИЙ БУДЕ ЗАПИТУВАТИ:
+// "СКІЛЬКИ МІСЯЦІВ МАЄ РІК", ЯКЩО КОРИСТУВАЧ ВВОДИТЬ 12 ТО У КОНСОЛІ ПИШЕ ВІРНО, ЯКЩО НЕ ПРАВИЛЬНО КОРИСТУВАЧ ВВІВ, ТОДІ У КОНСОЛІ ПИШЕ
+// "НЕ ЗНАЄТЕ? 12"
+
+// let months = Number(prompt("СКІЛЬКИ МІСЯЦІВ МАЄ РІК?"));
+
+// if (months === 12) {
+//     console.log(true)
+// }
+// else {
+//     console.log("НЕ ЗНАЄТЕ? 12")
+// }
+// ЗАДАЧА 5
+// НАПИШІТЬ ПРОГРАМУ, ЯКА ДОЗВОЛЯТИМЕ ЮЗЕРУ ВВОДИТИ ЧИСЛО І ОПРИДІЛЯТИМЕ ЧИ ЦІЛЕ ЦЕ ЧИСЛО, ЧИ НЕ ЦІЛЕ
+// let number = Number(prompt("Введіть число"));
+// // if (number % 2 === 0) {
+// //     console.log("Це ціле")
+// // }
+// // else {
+// //     console.log("це не ціле число")
+// // }
+// let number1 = number % 2 === 0 ? "Це ціле" : "це не ціле число";
+// console.log(number1)
+// ЗАДАЧА 6
+// НАПИШІТЬ ПРОГРАМУ , ДЕ МИ У КОРИСТОВАЧА ПИТАЄМОСЬ МІСЯЦЬ НАРОДЖЕННЯ, І ПОКАЗУЄМО У ЯКУ ПОРУ РОКУ ВІН НАРОДИВСЯ
+
+let birthMonth = Number(prompt("В якому місяці ви народилися?"));
+if (birthMonth === 12 || birthMonth === 1 || birthMonth === 2) {
+    console.log('Зима')
+}
+else if (birthMonth >= 3 && birthMonth < 6) {
+    console.log("Весна")
+}
+else if (birthMonth >= 6 && birthMonth < 9) {
+    console.log("Літо")
+}
+else if (birthMonth >= 9 && birthMonth < 12) {
+    console.log("Осінь")
+}
+
+else {
+console.log('Такої пори року немає')
+}
