@@ -144,19 +144,19 @@
 
 
 
-// ЗАДАЧА 4
-//  Провірте , чи являється рядок полідромом
-  const str = "ротатор";//true
-// const newString = "Hello";//false
+// // ЗАДАЧА 4
+// //  Провірте , чи являється рядок полідромом
+//   const str = "ротатор";//true
+// // const newString = "Hello";//false
 
-// const array=newString.split('');
-// console.log(array);
+// // const array=newString.split('');
+// // console.log(array);
 
-// array.reverse();
-// // const array2=str.split('');
-// const array3= array.join('');
-// console.log(array3 === newString);
+// // array.reverse();
+// // // const array2=str.split('');
+// // const array3= array.join('');
+// // console.log(array3 === newString);
 
-const text=str.split('').reverse().join('');
-console.log(text === str);
+// const text=str.split('').reverse().join('');
+// console.log(text === str);
 
