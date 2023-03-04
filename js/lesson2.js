@@ -31,18 +31,40 @@
 // ЩОБ МОЖНА БУЛО ПЕРЕВИКОРИСТОВУВАТИ ЛОГІКУ, ТОМУ ПИШЕМО ФУНКЦІЮ
 
 
- const salaries = {
-   John: 100,
-   Ann: 160,
-   Pete: 130,
+//  const salaries = {
+//    John: 100,
+//    Ann: 160,
+//    Pete: 130,
+// };
+// function totalSalary(salaries) {
+//     let sum = 0;
+//     const allSalaries = Object.values(salaries);
+//     // console.log(allSalaries);
+//     for (let salary of allSalaries) {
+//         sum += salary;        
+//     }
+//     return sum;
+// }
+// console.log(totalSalary(salaries));
+
+// ЗАДАЧА 3
+// Створи обєкт calculator(калькулятор) з 3-ма методами:
+// read()- запитує 2 значення у юзера і зберігає їх як значення обєкта;
+// sum() -повертає суму збережених значень; 
+// mult() -перемножує значення збережені і повертає результат;
+
+ const calculator = {
+ a: null,
+ b: null,
+
+  read() { this.a=prompt("Введіть значення a");this.b=prompt("Введіть значення b") },
+
+  sum() {return Number(this.a) + Number(this.b)},
+
+  mult() {return this.a*this.b},
 };
-function totalSalary(salaries) {
-    let sum = 0;
-    const allSalaries = Object.values(salaries);
-    // console.log(allSalaries);
-    for (let salary of allSalaries) {
-        sum += salary;        
-    }
-    return sum;
-}
-console.log(totalSalary(salaries));
+
+
+calculator.read();
+console.log(`sum`, calculator.sum());
+console.log(`mult`, calculator.mult());
