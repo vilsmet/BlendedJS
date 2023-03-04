@@ -41,7 +41,7 @@
 //     const allSalaries = Object.values(salaries);
 //     // console.log(allSalaries);
 //     for (let salary of allSalaries) {
-//         sum += salary;        
+//         sum += salary;
 //     }
 //     return sum;
 // }
@@ -50,21 +50,38 @@
 // ЗАДАЧА 3
 // Створи обєкт calculator(калькулятор) з 3-ма методами:
 // read()- запитує 2 значення у юзера і зберігає їх як значення обєкта;
-// sum() -повертає суму збережених значень; 
+// sum() -повертає суму збережених значень;
 // mult() -перемножує значення збережені і повертає результат;
 
- const calculator = {
- a: null,
- b: null,
+//  const calculator = {
+//  a: null,
+//  b: null,
 
-  read() { this.a=prompt("Введіть значення a");this.b=prompt("Введіть значення b") },
+//   read() { this.a=prompt("Введіть значення a");this.b=prompt("Введіть значення b") },
 
-  sum() {return Number(this.a) + Number(this.b)},
+//   sum() {return Number(this.a) + Number(this.b)},
 
-  mult() {return this.a*this.b},
-};
+//   mult() {return this.a*this.b},
+// };
 
 
-calculator.read();
-console.log(`sum`, calculator.sum());
-console.log(`mult`, calculator.mult());
+// calculator.read();
+// console.log(`sum`, calculator.sum());
+// console.log(`mult`, calculator.mult());
+
+// ЗАДАЧА 1
+// Напишіть дві функції:
+// letMeSeeYourName(callback) - запитує імя користувача , через prompt і викликає колбек функцію (callback)
+// greet(name) - колбек , який приймає імя і логінує в консоль рядок  "Привіт" + імя
+
+function letMeSeeYourName(callback) {
+    const userName = prompt("What`s your name?");
+    callback(userName)
+
+
+}
+
+function greet(name) {
+    console.log(`Hello ${name}`)
+}
+letMeSeeYourName(greet)
