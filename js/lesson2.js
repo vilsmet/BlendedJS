@@ -260,6 +260,14 @@ makeProduct("Холодильник", 10000, logger); */
 // Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
 // Використовуючи Array.prototype.filter виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
 
+// ЗАДАЧА 5
+// Виконати сортування масиву назв моніторів в алфавітному та зворотному алфавітному порядку.
+// const items = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ"];
+
+// ЗАДАЧА 6
+// Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
+// Використовуючи Array.prototype.filter виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
+
 // const courses = [
 //   {
 //     name: "Basic HTML+CSS",
@@ -305,3 +313,12 @@ makeProduct("Холодильник", 10000, logger); */
 // });
 
 // console.log(uniqueTopics);
+
+// const object = {
+//   message: 'Hello, World',
+//   getMessage() {
+//     const message = 'Hello, Earth';
+//     return this.message;
+//   },
+// };
+// console.log(object.getMessage());
