@@ -116,7 +116,7 @@
 // items.addItem("Манго");
 // items.removeItem("Ківі")
 
-class Storage{
+/* class Storage{
     constructor(items) {
         this.items = items;
     }
@@ -132,7 +132,7 @@ class Storage{
         else {
             this.items.splice(idx, 1);
         }
-        // this.items.splice(this.items.indexOf(item),1);доопрацювати
+        // this.items.splice(this.items.indexOf(item),1); доопрацювати тернарний
     }
 }
 const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
@@ -142,4 +142,79 @@ console.table(items);
 items.removeItem("Ківі");
 console.table(items);
 items.removeItem("Гарбуз");
-console.table(items);
+console.table(items); */
+
+
+
+/* Напиши клас Client який створює об'єкт із властивостями login і email.
+Оголоси приватні властивості #login і #email, доступ до яких зроби через геттер та сеттер login і email.
+ */
+
+class Client {
+    #login;
+    #email;
+    constructor(login, email) {
+        this.#login = login;
+        this.#email = email;
+    }
+
+    get login() {
+        return this.#login;
+    }
+
+    get email() {
+        return this.#email;
+    }
+
+    set login(newLogin) {
+       this.#login = newLogin;
+    }
+
+    set email(newEmail) {
+       this.#email = newEmail;
+    }
+
+}
+
+const emailLogin = new Client('it12345', 'vika1234@i.ua');
+
+console.log(emailLogin);
+
+
+/* ЗАДАЧА НА ЗАМИКАННЯ
+У вас є функція counter(), яка повинна 
+ЗАДАЧА 5
+Напиши клас Client який створює об'єкт з ​​властивостями login email. Оголоси приватні властивості #login #email,
+доступ до яких зроби через геттер та сеттер login email
+
+ЗАДАЧА 6
+Напишіть дві функції letMeSeeYourName(callback) - запитує ім'я користувача
+через prompt та викликає callback функцію
+greet(name) - коллбек, що приймає ім'я і логірує в консоль
+Рядок "Привіт <name>"
+Реалізуй перевірку, що prompt не порожній
+ */
+
+/* ЗАДАЧА 7
+От tutor_8 goit всем 12:01 PM
+ЗАДАЧА 8
+Виправте помилки, щоб код працював
+ const product = {
+ ціна: 5000,
+ showPrice() {
+ console.log(price);
+ 
+ЗАДАЧА 9
+Виправте помилки, щоб код працював
+const product = {
+  price: 5000,
+  showPrice() {
+    console.log(this.price);
+  },
+};
+
+function callAction(action) {
+  action();
+}
+callAction(product.showPrice);
+ */
