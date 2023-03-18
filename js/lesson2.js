@@ -245,7 +245,7 @@ makeProduct("Холодильник", 10000, logger); */
 
 // prices.sort((a, b) => a - b);
 // prices.sort((a, b) => b - a);
-// console.log(prices); 
+// console.log(prices);
 
 // ЗАДАЧА 5
 // Виконати сортування масиву назв моніторів в алфавітному та зворотному алфавітному порядку.
@@ -322,3 +322,27 @@ makeProduct("Холодильник", 10000, logger); */
 //   },
 // };
 // console.log(object.getMessage());
+
+
+// ЗАДАЧА 2
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+
+class User {
+    constructor({ userName, age, numberOfPost }) {
+        this.userName = userName;
+        this.age = age;
+        this.numberOfPost = numberOfPost;
+    }
+    getInfo() {
+        return ` User ${ this.userName } is ${ this.age } years old and has ${ this.numberOfPost } posts`
+    }
+}
+
+const user1 = new User({ userName: 'John', age: 30, numberOfPost: 15 })
+console.log(user1.getInfo())
