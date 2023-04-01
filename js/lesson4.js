@@ -59,7 +59,7 @@ const refs = {
 
 
 // function amount() {
-//     refs.quantityLabelEl.textContent = refs.quantityEl.value; 
+//     refs.quantityLabelEl.textContent = refs.quantityEl.value;
     
 // }
 
@@ -88,7 +88,7 @@ const refs = {
 // 3.1 Є МАСИВ, ПОТРІБНО СТВОРИТИ РОЗМІТКУ ІЗ ТИХ КАРТОК (ВИКОРИСТАЙТЕ ШАБЛОННИЙ РЯДОК)
 //  <ul class="js-list"></ul>
 // 3.2 ДОБАВТЕ КНОПКУ, ЧЕРЕЗ ЯКУ МИ КУПЛЯТИМЕМО ТОВАР
-const galeryEl= document.querySelector(".js-list");
+/* const galeryEl= document.querySelector(".js-list");
 // console.log(galeryEl);
 const instruments = [{
   id: 1,
@@ -127,4 +127,27 @@ function buyGoods(evt){
     console.log(evt.target);    
 }
 // buttonBuyEl.addEventListener("click", buyGoods);
-galeryEl.addEventListener("click", buyGoods);
+galeryEl.addEventListener("click", buyGoods); */
+
+/* 3) УМОВА
+Зробити фіксований скрол на сторінці для менюшки,тобто , щоб наше меню фіксувалось зверху браузера при скролі, для того потрібно порахувати висоту хедера, відстежуємо позицію скролу та додавати клас fixed-nav якщо скрол більше висоту хедера, в іншому випадку його видаляємо
+
+ */
+
+const navigation = document.querySelector('#navigation');
+const header = document.querySelector('.header');
+
+const headerHeight = header.clientHeight;
+
+function addClass() {
+  if (scrollY > headerHeight) {
+    navigation.classList.add('fixed-nav');
+  } else {
+    navigation.classList.remove('fixed-nav');
+  }
+}
+
+window.addEventListener('scroll', addClass);
+
+/* scrollY - визначає висоту
+scrollX - визначає ширину */
