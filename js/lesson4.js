@@ -34,7 +34,7 @@ list.append(...carList); */
 //НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, 
 //В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА , І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
 
-<<<<<<< Updated upstream
+
 const refs = {
   formEl: document.querySelector('.form'),
   priceEl: document.querySelector('#price'),
@@ -44,15 +44,6 @@ const refs = {
     btnEl: document.querySelector('.btn'),
     containerEl: document.querySelector('.container'),
 }
-=======
-// const refs = {
-//   formEl: document.querySelector('.form'),
-//   priceEl: document.querySelector('#price'),
-//   quantityEl: document.querySelector('#quantity'),
-//   quantityLabelEl: document.querySelector('.amount'),
-//   totalEl: document.querySelector('.total'),
-// }
->>>>>>> Stashed changes
 
 // // let currentQuantity = 0;
 // // let currentPrice = 0;
@@ -66,37 +57,39 @@ const refs = {
 //   refs.totalEl.textContent = totalPrice;
 // }
 
-<<<<<<< Updated upstream
-function amount() {
-    refs.quantityLabelEl.textContent = refs.quantityEl.value; 
+
+// function amount() {
+//     refs.quantityLabelEl.textContent = refs.quantityEl.value; 
     
-}
+// }
 
-refs.quantityEl.addEventListener('input', amount);
+// refs.quantityEl.addEventListener('input', amount);
 
-refs.formEl.addEventListener('submit', calculator);
-
-window.addEventListener('DOMContentLoaded', calculator)
-
-/* 2.3 НАПИШІТЬ  РАНДОМНИЙ КОЛІР ДЛЯ НАШОЇ ФОРМИ КОЛЬКУЛЯТОРА ЗА ДОПОМОГОЮ ІНЛАЙНОВОГО СТИЛЮ */
-
-const randomRgbColor = () => {
-  const r = Math.round(Math.random() * (255 - 1) + 1);
-  const g = Math.round(Math.random() * (255 - 1) + 1);
-  const b = Math.round(Math.random() * (255 - 1) + 1);
-  return `rgb(${r},${g},${b})`;
-};
-
-refs.containerEl.style.backgroundColor = randomRgbColor();
-
-=======
-// refs.formEl.addEventListener('input', calculator);
+// refs.formEl.addEventListener('submit', calculator);
 
 // window.addEventListener('DOMContentLoaded', calculator)
-ЗАДАЧА 3
-3.1 Є МАСИВ, ПОТРІБНО СТВОРИТИ РОЗМІТКУ ІЗ ТИХ КАРТОК (ВИКОРИСТАЙТЕ ШАБЛОННИЙ РЯДОК)
- <ul class="js-list"></ul>
 
+// /* 2.3 НАПИШІТЬ  РАНДОМНИЙ КОЛІР ДЛЯ НАШОЇ ФОРМИ КОЛЬКУЛЯТОРА ЗА ДОПОМОГОЮ ІНЛАЙНОВОГО СТИЛЮ */
+
+// const randomRgbColor = () => {
+//   const r = Math.round(Math.random() * (255 - 1) + 1);
+//   const g = Math.round(Math.random() * (255 - 1) + 1);
+//   const b = Math.round(Math.random() * (255 - 1) + 1);
+//   return `rgb(${r},${g},${b})`;
+// };
+
+// refs.containerEl.style.backgroundColor = randomRgbColor();
+
+
+// // refs.formEl.addEventListener('input', calculator);
+
+// // window.addEventListener('DOMContentLoaded', calculator)
+// ЗАДАЧА 3
+// 3.1 Є МАСИВ, ПОТРІБНО СТВОРИТИ РОЗМІТКУ ІЗ ТИХ КАРТОК (ВИКОРИСТАЙТЕ ШАБЛОННИЙ РЯДОК)
+//  <ul class="js-list"></ul>
+// 3.2 ДОБАВТЕ КНОПКУ, ЧЕРЕЗ ЯКУ МИ КУПЛЯТИМЕМО ТОВАР
+const galeryEl= document.querySelector(".js-list");
+// console.log(galeryEl);
 const instruments = [{
   id: 1,
   img: "https://content.rozetka.com.ua/goods/images/big/13664457.jpg",
@@ -114,4 +107,24 @@ const instruments = [{
   name: "Рівень",
   price: 2000
 }]
->>>>>>> Stashed changes
+
+function createMarkup() {
+const instrumentMarkup= instruments.map(({id,img,name,price})=>{return `
+<li data-id="${id}">
+    <img src="${img}" alt="${name}">
+    <h2>${name}</h2>
+    <p>${price}</p>
+    <button type="submit" class="buy">Купити</button>
+</li>`})
+.join("");
+galeryEl.insertAdjacentHTML("afterend",instrumentMarkup);
+}
+createMarkup();
+// 3.2 ДОБАВТЕ КНОПКУ, ЧЕРЕЗ ЯКУ МИ КУПЛЯТИМЕМО ТОВАР
+// кнопка виводить у консоль повідомлення з id товару і що його куплено
+const buttonBuyEl=document.querySelector(".buy");
+function buyGoods(evt){
+    console.log(evt.target);    
+}
+// buttonBuyEl.addEventListener("click", buyGoods);
+galeryEl.addEventListener("click", buyGoods);
