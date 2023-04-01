@@ -2,7 +2,7 @@
 // ЗАДАЧА 1
 // Створіть карточки товару з масиву використовуючи createElement js/
 
-import car from "./date/cars.js"
+/* import car from "./date/cars.js"
 
 const list = document.querySelector(".js-goods");
 
@@ -26,4 +26,34 @@ function createCarsList({ name, img, price, description }) {
 const carList = car.map(createCarsList);
 console.log(carList)
 
-list.append(...carList);
+list.append(...carList); */
+
+
+
+//ЗАДАЧА 2
+//НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, 
+//В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА , І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
+
+const refs = {
+  formEl: document.querySelector('.form'),
+  priceEl: document.querySelector('#price'),
+  quantityEl: document.querySelector('#quantity'),
+  quantityLabelEl: document.querySelector('.amount'),
+  totalEl: document.querySelector('.total'),
+}
+
+// let currentQuantity = 0;
+// let currentPrice = 0;
+
+function calculator (evt) {
+  evt.preventDefault();
+
+  const totalPrice = refs.priceEl.value * refs.quantityEl.value;
+
+  refs.quantityLabelEl.textContent = refs.quantityEl.value;
+  refs.totalEl.textContent = totalPrice;
+}
+
+refs.formEl.addEventListener('input', calculator);
+
+window.addEventListener('DOMContentLoaded', calculator)
