@@ -34,6 +34,7 @@ list.append(...carList); */
 //НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, 
 //В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА , І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
 
+<<<<<<< Updated upstream
 const refs = {
   formEl: document.querySelector('.form'),
   priceEl: document.querySelector('#price'),
@@ -43,19 +44,29 @@ const refs = {
     btnEl: document.querySelector('.btn'),
     containerEl: document.querySelector('.container'),
 }
+=======
+// const refs = {
+//   formEl: document.querySelector('.form'),
+//   priceEl: document.querySelector('#price'),
+//   quantityEl: document.querySelector('#quantity'),
+//   quantityLabelEl: document.querySelector('.amount'),
+//   totalEl: document.querySelector('.total'),
+// }
+>>>>>>> Stashed changes
 
-// let currentQuantity = 0;
-// let currentPrice = 0;
+// // let currentQuantity = 0;
+// // let currentPrice = 0;
 
-function calculator (evt) {
-  evt.preventDefault();
+// function calculator (evt) {
+//   evt.preventDefault();
 
-  const totalPrice = refs.priceEl.value * refs.quantityEl.value;
+//   const totalPrice = refs.priceEl.value * refs.quantityEl.value;
 
-  refs.quantityLabelEl.textContent = refs.quantityEl.value;
-  refs.totalEl.textContent = totalPrice;
-}
+//   refs.quantityLabelEl.textContent = refs.quantityEl.value;
+//   refs.totalEl.textContent = totalPrice;
+// }
 
+<<<<<<< Updated upstream
 function amount() {
     refs.quantityLabelEl.textContent = refs.quantityEl.value; 
     
@@ -78,3 +89,29 @@ const randomRgbColor = () => {
 
 refs.containerEl.style.backgroundColor = randomRgbColor();
 
+=======
+// refs.formEl.addEventListener('input', calculator);
+
+// window.addEventListener('DOMContentLoaded', calculator)
+ЗАДАЧА 3
+3.1 Є МАСИВ, ПОТРІБНО СТВОРИТИ РОЗМІТКУ ІЗ ТИХ КАРТОК (ВИКОРИСТАЙТЕ ШАБЛОННИЙ РЯДОК)
+ <ul class="js-list"></ul>
+
+const instruments = [{
+  id: 1,
+  img: "https://content.rozetka.com.ua/goods/images/big/13664457.jpg",
+  name: "Молоток",
+  price: 150
+},
+{
+  id: 2,
+  img: "https://machtz.com.ua/files/resized/products/dsc_2898_new.800x550.jpg",
+  name: "Перфоратор",
+  price: 3000
+},{
+  id: 3,
+  img: "https://content2.rozetka.com.ua/goods/images/big_tile/232653359.jpg",
+  name: "Рівень",
+  price: 2000
+}]
+>>>>>>> Stashed changes
