@@ -39,7 +39,9 @@ const refs = {
   priceEl: document.querySelector('#price'),
   quantityEl: document.querySelector('#quantity'),
   quantityLabelEl: document.querySelector('.amount'),
-  totalEl: document.querySelector('.total'),
+    totalEl: document.querySelector('.total'),
+    btnEl: document.querySelector('.btn'),
+    containerEl: document.querySelector('.container'),
 }
 
 // let currentQuantity = 0;
@@ -54,6 +56,25 @@ function calculator (evt) {
   refs.totalEl.textContent = totalPrice;
 }
 
-refs.formEl.addEventListener('input', calculator);
+function amount() {
+    refs.quantityLabelEl.textContent = refs.quantityEl.value; 
+    
+}
+
+refs.quantityEl.addEventListener('input', amount);
+
+refs.formEl.addEventListener('submit', calculator);
 
 window.addEventListener('DOMContentLoaded', calculator)
+
+/* 2.3 НАПИШІТЬ  РАНДОМНИЙ КОЛІР ДЛЯ НАШОЇ ФОРМИ КОЛЬКУЛЯТОРА ЗА ДОПОМОГОЮ ІНЛАЙНОВОГО СТИЛЮ */
+
+const randomRgbColor = () => {
+  const r = Math.round(Math.random() * (255 - 1) + 1);
+  const g = Math.round(Math.random() * (255 - 1) + 1);
+  const b = Math.round(Math.random() * (255 - 1) + 1);
+  return `rgb(${r},${g},${b})`;
+};
+
+refs.containerEl.style.backgroundColor = randomRgbColor();
+
