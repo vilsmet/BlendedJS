@@ -6,21 +6,20 @@
 
 // Your API key: 35881425-29f70e74d3fcf7112678d9ed3
 const BASE_URL='https://pixabay.com/api/';
-const API_KEY='35881425-29f70e74d3fcf7112678d9ed3'
-const ENDPOINT='';
-const params= {
+const params= new URLSearchParams({
+    "key":"35881425-29f70e74d3fcf7112678d9ed3",
     "safesearch": "true",
     "image_type": "photo",
     "orientation": "horizontal",
     "category": "computer",
-}
-fetch(`${BASE_URL}?key=${API_KEY}&${params}`)
-// fetch(`${BASE_URL}?key=${API_KEY}`)
-// fetch(`${BASE_URL}?key=${API_KEY}`)
+    "per_page": 40,
+})
+
+fetch(`${BASE_URL}?${params}`)
 .then(resp=> resp.json())
 .then(data=>renderGallery(data.hits))
 .catch(error=>console.log(error));
-// previewURL: 
+
 function createImage(objPreviewUrl){
     const newImg = document.createElement("img");
     newImg.src= objPreviewUrl.previewURL;
